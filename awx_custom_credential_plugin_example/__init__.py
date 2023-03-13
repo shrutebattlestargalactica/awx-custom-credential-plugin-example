@@ -17,8 +17,8 @@ def some_lookup_function(**kwargs):
         raise ValueError('Invalid token!')
 
     value = {
-        'username': 'mary',
-        'email': 'mary@example.org',
+        'username': 'bob',
+        'email': 'user@example.org',
         'password': 'super-secret'
     }
 
@@ -28,7 +28,7 @@ def some_lookup_function(**kwargs):
     raise ValueError(f'Could not find a value for {identifier}.')
 
 example_plugin = CredentialPlugin(
-    'Example AWX Credential Plugin',
+    'AWS Secrets Manager',
     # see: https://docs.ansible.com/ansible-tower/latest/html/userguide/credential_types.html
     # inputs will be used to create a new CredentialType() instance
     #
